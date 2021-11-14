@@ -1,0 +1,36 @@
+CANVAS_WIDTH = 500
+CANVAS_HEIGHT = 500
+NUM_ROWS = 10
+NUM_COLUMNS = 20
+QUAD_HEIGHT = CANVAS_WIDTH/NUM_ROWS
+
+function setup() {
+  createCanvas(CANVAS_WIDTH, CANVAS_HEIGHT);
+  background(50);
+    for(var i = 0;i<NUM_COLUMNS;i++)
+    for(var j = 0;j<NUM_ROWS;j++){
+      noStroke()
+      if(j<NUM_ROWS/2){
+        
+        let blueValue = random(15*j, 100)
+        fill(0, 0, blueValue)
+      }
+      else{
+        let blueValue = random(10+(NUM_ROWS+j), 40+50*(NUM_ROWS-j))
+        fill(0, 0, blueValue)
+      }
+      
+      let point1x = i*QUAD_HEIGHT
+      let point1y = j*QUAD_HEIGHT
+      let point2x = (i+1)*QUAD_HEIGHT
+      let point2y = j*QUAD_HEIGHT
+      let point3x = i*QUAD_HEIGHT
+      let point3y = (j+1)*QUAD_HEIGHT
+      let point4x = (i+1)*QUAD_HEIGHT
+      let point4y = (j+1)*QUAD_HEIGHT
+    
+      fill(175, 100, 220)
+    quad(point1x, point1y, point2x, point2y, point3x, point3y, point4x, point4y);
+    }
+  
+}
