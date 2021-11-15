@@ -1,3 +1,5 @@
+## just leaving an example comment
+
 CANVAS_WIDTH = 500
 CANVAS_HEIGHT = 500
 NUM_ROWS = 10
